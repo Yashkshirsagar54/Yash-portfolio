@@ -1,0 +1,283 @@
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+import "./Resume.css";
+
+import Navbar from "../Navbar/Navbar";
+import Project from "./Project";
+import resumeIcon from "/iconsImg/resume.png";
+import fetchCertificates from "../../Utils/GetCertificates";
+import fetchProjects from "../../Utils/GetProjects";
+import fetchSkills from "../../Utils/GetSkills";
+import fetchInfo from "../../Utils/GetInfo";
+
+function Resume() {
+  const handleDownload = (e) => {
+    window.print();
+  };
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const [infoData, setInfoData] = useState();
+  const [certificatesData, setCertificatesData] = useState();
+  const [projects, setProjects] = useState();
+  const [skillsData, setSkillsData] = useState();
+
+  window.addEventListener("resize", () => {
+    setWidth(window.innerWidth);
+  });
+
+  const getInfo = async () => {
+    setInfoData(await fetchInfo());
+  };
+
+  const getProjects = async () => {
+    setProjects(await fetchProjects());
+  };
+
+  const getCertificates = async () => {
+    setCertificatesData(await fetchCertificates());
+  };
+
+  const getSkills = async () => {
+    setSkillsData(await fetchSkills());
+  };
+
+  useEffect(() => {
+    getInfo();
+    getCertificates();
+    getProjects();
+    getSkills();
+  }, []);
+
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        transition: { duration: 0.75, ease: "easeOut" },
+      }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 0.5, ease: "easeOut" },
+      }}
+      exit={{
+        opacity: 0,
+        transition: { duration: 0.75, ease: "easeOut" },
+      }}
+    >
+      <div className="Resume">
+        <Navbar />
+
+        <Link to="/" className="backButton">
+          <div className="button">Back</div>
+        </Link>
+        <img src={resumeIcon} alt="" className="imgIcon resumeIcon" />
+
+        <div className="downloadButtons flex">
+          <div className="button" onClick={handleDownload}>
+            <i className="fa-regular fa-floppy-disk"></i>{" "}
+            {width < 750 ? "" : " Download"}
+          </div>
+          {infoData ? (
+            <a
+              href={infoData.resumeUrl}
+              download
+              className="button"
+              title="download my original resume"
+            >
+              <i className="fa-solid fa-download"></i>{" "}
+              {width < 750 ? "" : "Original"}
+            </a>
+          ) : (
+            <div className="small-loader"></div>
+          )}
+        </div>
+        <div id="Print">
+          <header className="flex header">
+            <main>
+              <div className="main-title">
+                <b>
+                  {infoData ? (
+                    infoData.name
+                  ) : (
+                    <div className="small-loader"></div>
+                  )}
+                </b>
+              </div>
+              <div className="sub-heading">
+                Data Analyst and Frontend Developer
+              </div>
+              <div className="links flex">
+                {infoData ? (
+                  <>
+                    <a
+                      href={infoData.links.github}
+                      className="sub-heading socialLink flex"
+                    >
+                      <i className="fa-brands fa-github"></i>{" "}
+                      {infoData.links.github.split("/").pop()}
+                    </a>
+                    <a
+                      href={infoData.links.linkedin}
+                      className="sub-heading socialLink flex"
+                    >
+                      <i className="fa-brands fa-linkedin"></i> {infoData.name}
+                    </a>
+                  </>
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </div>
+            </main>
+            <div className="contacts flex">
+              <div className="contact flex">
+                <div className="icon flex">
+                  <i className="fa-solid fa-envelope"></i>
+                </div>
+                {infoData ? (
+                  <a
+                    className="info flex sub-heading"
+                    href={`mailto:${infoData.emailId}`}
+                  >
+                    {infoData.emailId}
+                  </a>
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </div>
+              <div className="contact flex">
+                <div className="icon flex">
+                  <i className="fa-solid fa-phone"></i>
+                </div>
+                <a href={`tel:${infoData ? infoData.contact.phone : ""}`} className="info flex sub-heading">
+                  {infoData ? infoData.contact.phone : ""}
+                </a>
+              </div>
+              <div className="contact flex">
+                <div className="icon flex">
+                  <i className="fa-solid fa-location-dot"></i>
+                </div>
+                <div className="info flex sub-heading">
+                  {infoData ? infoData.contact.location : ""}
+                </div>
+              </div>
+            </div>
+          </header>
+          <hr className="hr" />
+          <main className="main flex sub-heading">
+            <div className="left">
+              {/* Education section */}
+              <section>
+                <div className="main-title">Education</div>
+                {infoData && infoData.education ? (
+                  infoData.education.map((edu, i) => (
+                    <div key={i} className="desc">
+                      <div className="title">
+                        <b>{edu.degree}</b>
+                      </div>
+                      <div className="name">{edu.institution}</div>
+                      <div className="marks">{edu.marks}</div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </section>
+              {/* Courses section */}
+              <section>
+                <div className="main-title">Courses</div>
+                {infoData && infoData.courses ? (
+                  infoData.courses.map((course, i) => (
+                    <div key={i} className="desc">
+                      <div className="title">
+                        <b>{course.title}</b>
+                      </div>
+                      <div className="name">{course.organization}</div>
+                      <div className="marks">{course.marks}</div>
+                    </div>
+                  ))
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </section>
+              <section>
+                <div className="main-title">Technologies</div>
+                <ul className="techs">
+                  {skillsData ? (
+                    <>
+                      {skillsData.map((tech) => (
+                        <li className="tech" key={tech.name}>
+                          {tech.name}
+                          <img
+                            src={tech.imgLink}
+                            alt={tech.name}
+                            className="techImg"
+                          />
+                        </li>
+                      ))}
+                    </>
+                  ) : (
+                    <div className="small-loader"></div>
+                  )}
+                </ul>
+              </section>
+              <section>
+                <div className="main-title">Certifications</div>
+                {certificatesData ? (
+                  <>
+                    {Object.keys(certificatesData).map((key, i) => (
+                      <ul key={i} className="certificateList">
+                        <b>{key}</b>
+                        {certificatesData[key].map((certificate, i) => (
+                          <li key={i}>
+                            <a
+                              className="link"
+                              target="_blank"
+                              href={certificate.credLink}
+                            >
+                              {certificate.name}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
+                  </>
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </section>
+            </div>
+            {/**
+             * right section
+             */}
+            <div className="right">
+              <section>
+                <div className="main-title">Projects</div>
+                {projects ? (
+                  <>
+                    {projects.map((project, i) => (
+                      <Project
+                        key={i}
+                        title={project.title}
+                        desc={project.desc}
+                        stack={project.stack}
+                        link={project.link}
+                        gitLink={project.gitLink}
+                        year={project.year}
+                      />
+                    ))}
+                  </>
+                ) : (
+                  <div className="small-loader"></div>
+                )}
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default Resume;

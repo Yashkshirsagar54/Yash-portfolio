@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Python",
+        "link": "https://www.python.org/",
+        "imgLink": "https://profilinator.rishav.dev/skills-assets/python-original.svg"
+    },
+    {
+        "name": "JavaScript",
+        "link": "https://www.javascript.com/",
+        "imgLink": "https://profilinator.rishav.dev/skills-assets/javascript-original.svg"
+    },
+    {
+        "name": "CSS",
+        "link": "https://www.w3schools.com/css/",
+        "imgLink": "https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg"
+    },
+    {
+        "name": "HTML",
+        "link": "https://en.wikipedia.org/wiki/HTML5",
+        "imgLink": "https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg"
+    },
+    {
+        "name": "Excel",
+        "link": "https://www.microsoft.com/en-us/microsoft-365/excel",
+        "imgLink": "/iconsImg/excel.jpg"
+    },
+    {
+        "name": "Power BI",
+        "link": "https://powerbi.microsoft.com/",
+        "imgLink": "/iconsImg/power-bi.png"
+    }
+]

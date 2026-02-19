@@ -1,0 +1,50 @@
+{
+    "name": "Yash Kshirsagar",
+    "profileImg": "/me.png",
+    "resumeUrl": "/resume.pdf",
+    "emailId": "yashkshirsagar@example.com",
+    "about": "I am a passionate Data Analyst and Frontend Developer dedicated to building high-quality, performant, and visually stunning web applications. With expertise in modern frameworks and 3D web technologies, I bring creative visions to life.",
+    "links": {
+        "github": "https://github.com/Yashkshirsagar54",
+        "linkedin": "https://www.linkedin.com/in/yashkshirsagar5454/",
+        "instagram": "https://instagram.com/yashkshirsagar",
+        "youtube": "https://www.youtube.com/@Yash-K54"
+    },
+    "contact": {
+        "email": "Kshirsagaryash5454@gmail.com",
+        "phone": "+91 8999956242",
+        "location": "Pune, Maharashtra, India."
+    },
+    "bio": [
+        "Hello everyone, my name is Yash Kshirsagar and I'm a passionate about Data Analyst and Frontend Developer with a specialization in building modern web applications. I love working with React, Node.js, and exploring creative possibilities with THREE.js and GSAP.",
+        "Driven by curiosity and a desire for excellence, I constantly strive to learn new technologies and improve my craft. My goal is to create web experiences that are not only functional but also visually captivating and user-friendly.",
+        "I have experience in a wide range of technologies including JavaScript, React, Tailwind CSS, and various backend tools. I'm always excited to take on new challenges and contribute to innovative projects."
+    ],
+    "education": [
+        {
+            "degree": "B.S.c In Computer Science",
+            "institution": "Mit Arts,Commerce And Science College Alandi.",
+            "status": "Pursuing",
+            "marks": "Status: Pursuing"
+        },
+        {
+            "degree": "S.S.C.",
+            "institution": "Shree Ram Vidya Mandir,Bhosari",
+            "status": "Completed",
+            "marks": "Marks: 84.00%"
+        },
+        {
+            "degree": "H.S.C.",
+            "institution": "Shree Bhairavnath Junior College,Bhosari",
+            "status": "Completed",
+            "marks": "Marks: 71.33%"
+        }
+    ],
+    "courses": [
+        {
+            "title": "Data Analytics",
+            "organization": "Simplilearn",
+            "marks": "python,excel,sql,tableau,Power Bi"
+        }
+    ]
+}

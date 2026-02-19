@@ -1,0 +1,260 @@
+.downloadButtons {
+  position: fixed !important;
+  z-index: 9999;
+  right: calc(9vw + 2rem);
+  top: 1rem;
+  gap: 1rem;
+}
+.downloadButtons .button {
+  width: fit-content;
+  margin: 0;
+  padding: 7px 20px !important;
+}
+.resumeIcon {
+  width: 10vw;
+  top: 5rem;
+  right: 1rem;
+  animation: floating 3s infinite ease-in-out;
+}
+.backButton {
+  position: absolute;
+  top: 6rem;
+}
+.backButton .button {
+  width: fit-content;
+  padding: 0.8rem 1.5rem !important;
+}
+#Print {
+  margin-top: 8rem;
+}
+.Resume .header {
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 65rem;
+  margin: auto;
+}
+.Resume .header .main-title {
+  font-size: 2rem;
+}
+.Resume .header .sub-heading {
+  font-size: 0.7rem;
+}
+.Resume .header main .links {
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+.Resume .header main .links .socialLink {
+  gap: 0.3rem;
+}
+.Resume .header main .links .socialLink i {
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+}
+.Resume .header main .links .sub-heading {
+  font-size: 0.7rem;
+}
+.Resume .header .contacts {
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.Resume .header .contacts .contact {
+  justify-content: space-between;
+}
+.Resume .header .contacts .contact .icon {
+  margin-right: 0.5rem;
+  width: 2rem;
+  justify-content: center;
+  color: var(--text-c-link);
+}
+.Resume .header .contacts .contact .icon i {
+  font-size: 0.7rem;
+}
+.Resume .header .contacts .contact .info {
+  width: 12rem;
+}
+/* .main * {
+  box-shadow: 0 0 0 1px red;
+} */
+.main {
+  align-items: flex-start !important;
+  max-width: 70rem;
+  margin: auto;
+  padding: 2rem 0;
+  justify-content: space-around;
+}
+.main .main-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+.main .left {
+  max-width: 18rem;
+}
+.main .left section {
+  margin: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--border-c);
+}
+.main .right section .desc {
+  border-bottom: 1px solid var(--border-c);
+  padding-bottom: 0.3rem;
+}
+.main .left .desc {
+  margin-bottom: 1rem;
+}
+.main .left .name {
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+.main .left .marks {
+  color: var(--light-text-c);
+  font-size: 0.8rem;
+}
+.main .right {
+  width: 50rem;
+  border-left: 1px solid var(--border-c);
+}
+.main .right section {
+  margin: 0 1rem 3rem 1rem;
+}
+.main .right section .desc {
+  margin-bottom: 2rem;
+}
+.main .right section .title {
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.main .right section .info {
+  font-size: 0.8rem;
+  text-indent: 2rem;
+  text-align: justify;
+  margin-bottom: 0.5rem;
+}
+.main .right section .links {
+  font-size: 0.8rem;
+}
+.main .right section .links a {
+  color: var(--light-text-c);
+}
+.main .left section .techs,
+.main .left section .certificateList {
+  padding-left: 1rem;
+}
+.main .left section .techs .tech {
+  margin: 0.5rem 0;
+}
+.main .left section .techs .techImg {
+  float: right;
+  width: 15px;
+  margin-left: 5px;
+}
+.main .left section .certificateList li {
+  margin: 0.5rem 0;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 600px) {
+  .resumeIcon {
+    width: 15vw;
+    top: 50vw;
+    right: 1rem;
+    animation: floating 3s infinite ease-in-out;
+  }
+  .backButton .button {
+    text-align: center;
+    padding: 0.8rem 1.5rem !important;
+  }
+  .downloadButtons {
+    gap: 0.5rem;
+  }
+  .downloadButtons .button {
+    padding: 6px 14px !important;
+  }
+  .Resume .header .main-title {
+    font-size: 2rem;
+  }
+  .Resume .header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .main .main-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  .Resume .header .contacts .contact .info {
+    width: 11rem;
+  }
+  .main .left {
+    max-width: 90rem;
+  }
+  .main .right {
+    width: auto;
+    border-left: 0;
+  }
+  .main {
+    max-width: 70rem;
+    margin: auto;
+    padding: 2rem 0;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center !important;
+  }
+  .Resume .header main .links {
+    justify-content: center;
+  }
+  .main .right section .desc {
+    padding: 0.2rem;
+  }
+  .main .right section .title .stack {
+    font-size: 0.5rem;
+    width: 40vw;
+    text-align: right;
+  }
+}
+@media screen and (max-width: 400px) {
+  .backButton .button {
+    margin: 0 5vw;
+  }
+  .downloadButtons {
+    gap: 0.5rem;
+    flex-direction: column;
+    top: 5rem;
+    right: 1rem;
+  }
+  .downloadButtons .button {
+    padding: 6px 14px !important;
+  }
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #Print {
+    margin-top: 0;
+  }
+  .main .left {
+    width: 18rem;
+  }
+  .main .main-title {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .main .title {
+    font-size: 0.8rem;
+  }
+  .main .name {
+    font-size: 0.7rem !important;
+  }
+  .main .right .desc .info {
+    font-size: 0.7rem !important;
+  }
+  #Print,
+  #Print * {
+    visibility: visible;
+  }
+}
+@page {
+  size: A4;
+  margin: 0;
+  padding: 1rem 0;
+}

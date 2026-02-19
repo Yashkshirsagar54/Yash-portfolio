@@ -1,0 +1,25 @@
+.connect .buttons {
+  flex-wrap: wrap;
+}
+.connect .button {
+  padding: 0.5rem 1rem;
+  margin: 1rem 0.5rem;
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .connect .buttons {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .resume-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 325px) {
+  .connect .resume-button {
+    width: 60vw;
+  }
+}

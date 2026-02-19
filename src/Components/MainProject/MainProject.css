@@ -1,0 +1,111 @@
+.MainProject {
+  padding: 7rem 2rem 1rem 2rem;
+}
+.MainProject .main-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.MainProject .main-title .penIcon {
+  width: 8rem;
+  right: 0;
+  top: -40%;
+  position: absolute;
+}
+.MainProject .main-title .year {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.MainProject .button {
+  margin-bottom: 1rem;
+  width: fit-content;
+  padding: 1rem 3rem;
+}
+.MainProject .imgWrapper {
+  margin-top: 3rem;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.MainProject .imgWrapper .placeholder {
+  width: 40vw;
+  position: absolute;
+  top: 0;
+  aspect-ratio: 16/9;
+}
+
+.MainProject .imgWrapper img {
+  width: 40vw;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  border: 5px solid var(--secondary-color);
+}
+.MainProject .desc {
+  padding: 2rem 3rem;
+  line-height: 2rem;
+  font-weight: 500;
+  font-family: var(--ff);
+  color: var(--light-text-c);
+  text-align: justify;
+}
+.MainProject .sub-title {
+  font-size: 2rem;
+  text-align: center;
+}
+.MainProject .desc::first-letter {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+.MainProject .buttons {
+  margin: 2rem 0;
+  text-align: center;
+}
+.MainProject .button {
+  padding: 0.7rem 1.4rem;
+}
+@media screen and (max-width: 750px) {
+  .MainProject .main-title .penIcon {
+    width: 5rem;
+    right: 5%;
+    top: -40%;
+    position: absolute;
+  }
+  .MainProject {
+    text-align: center;
+    padding: 6rem 1rem 1rem 1rem;
+  }
+  .MainProject .titles .heading {
+    margin-top: 2rem;
+    font-size: 0.7rem;
+  }
+  .MainProject .imgWrapper {
+    margin-top: 1rem;
+  }
+  .MainProject .imgWrapper .placeholder {
+    width: 80vw;
+  }
+  .MainProject .imgWrapper img {
+    width: 80vw;
+  }
+  .MainProject .desc {
+    padding: 2rem 1rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+  }
+  .MainProject .sub-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .MainProject .main-title .penIcon {
+    display: none;
+  }
+  .MainProject .button {
+    width: auto;
+  }
+}

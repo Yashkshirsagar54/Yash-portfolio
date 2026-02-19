@@ -1,0 +1,16 @@
+{
+    "Deloitte": [
+        {
+            "name": "Deloitte Data Analytics Virtual Experience Program",
+            "imgSrc": "/certificatesImg/deloitte.jpg",
+            "credLink": "https://www.theforage.com/virtual-internships/prototype/T7iLO7698K28YvYho/Data-Analytics-Virtual-Experience-Program"
+        }
+    ],
+    "others": [
+        {
+            "name": "Business Analytics Certificate",
+            "imgSrc": "/certificatesImg/simplilearn.jpg",
+            "credLink": "https://www.simplilearn.com/"
+        }
+    ]
+}

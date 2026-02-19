@@ -1,0 +1,205 @@
+.Navbar {
+  justify-content: space-between;
+  padding: 1rem calc(5vw + 1rem);
+  background-color: var(--blur-c);
+  backdrop-filter: blur(7px);
+  z-index: 999;
+  position: fixed;
+  box-shadow: var(--shadow);
+  width: 100vw;
+  top: 0;
+}
+.menuToggle {
+  display: none !important;
+}
+.Navbar .logo {
+  font-size: 1.3rem;
+  color: var(--light-text-c);
+  font-family: var(--ff);
+}
+.Navbar .logo .icon {
+  margin-right: 20px;
+}
+
+.Navbar .logo .icon g {
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+.logo-text {
+  font-family: arty, cursive;
+}
+
+.Navbar .links .link {
+  margin: 0rem 1rem;
+  padding: 0.2rem;
+}
+.Navbar .contact-button {
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+}
+@media screen and (max-width: 1160px) {
+  .menuToggle {
+    display: flex !important;
+    color: var(--primary-color);
+    position: fixed;
+    background-image: var(--button-gradient);
+    top: 9px;
+    right: 30px;
+    border-radius: 100vw;
+    box-shadow: var(--shadow);
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .hamburger {
+    cursor: pointer;
+  }
+
+  .hamburger svg {
+    height: 40px;
+    width: 40px;
+    margin-top: 5px;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hamburger .line {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transition: stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+
+  .hamburgerClose svg {
+    transform: rotate(-45deg);
+  }
+
+  .hamburgerClose svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+
+  .Navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    top: 0;
+    box-shadow: var(--shadow);
+    animation: 0s;
+    backdrop-filter: none;
+  }
+  .Navbar .right {
+    transition: var(--transition);
+    position: fixed;
+    height: 100vh;
+    width: 80vw;
+    padding: calc(3rem + 3vw);
+    box-shadow: var(--shadow);
+    background-color: var(--blur-c);
+    backdrop-filter: blur(80px);
+    top: 0;
+    right: 0;
+    z-index: 99;
+    flex-wrap: wrap;
+  }
+  .Navbar .overlay {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -9;
+    background-color: rgba(0, 0, 0, 0.466);
+    transition: var(--transition);
+  }
+  .Navbar .overlayClose {
+    pointer-events: none;
+    background-color: transparent;
+  }
+  .menuOpen {
+    right: 0;
+  }
+  .menuClose {
+    right: -100% !important;
+  }
+  .Navbar .right .buttons {
+    padding-bottom: 4rem;
+    flex-wrap: wrap;
+    height: 100%;
+    padding-top: 3rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .Navbar .links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Navbar .links .link {
+    margin: 1rem;
+  }
+  .Navbar .links .link::before {
+    transform: scaleX(0.3);
+    transform-origin: left;
+  }
+  .link:hover::before {
+    transform: scaleX(1) !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menuToggle {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 40px;
+    top: 15px;
+    right: 20px;
+  }
+  .hamburger svg {
+    height: 30px;
+    width: 30px;
+  }
+  .Navbar {
+    padding: 1rem 0.5rem;
+  }
+
+  .Navbar .container {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .Navbar .right {
+    padding: 4rem 1rem 2rem 1rem;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .Navbar .logo {
+    font-size: 1rem;
+  }
+  .Navbar .logo .icon {
+    margin: 0 10px;
+    width: 30px;
+  }
+  .Navbar .links .link {
+    font-size: 1.3rem;
+    color: var(--light-text-c);
+  }
+
+  .Navbar .right .buttons {
+    padding-top: 0;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .Navbar .right {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

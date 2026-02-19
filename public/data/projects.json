@@ -1,0 +1,55 @@
+[
+    {
+        "title": "Zomato Data Analysis",
+        "imgSrc": "/projectsImg/zomato.jpg",
+        "imgs": [
+            "/projectsImg/zomato.jpg"
+        ],
+        "stack": [
+            "Python",
+            "Pandas",
+            "Matplotlib",
+            "Seaborn"
+        ],
+        "desc": "A comprehensive data analysis project on Zomato restaurant data to uncover trends in pricing, ratings, and cuisines. Performed data cleaning, exploratory data analysis (EDA), and visualization to provide actionable insights.",
+        "link": "https://github.com/Yashkshirsagar54",
+        "gitLink": "https://github.com/Yashkshirsagar54",
+        "year": "2024",
+        "isInDevelopment": false
+    },
+    {
+        "title": "Hotstar Data Analysis",
+        "imgSrc": "/projectsImg/hotstar.jpg",
+        "imgs": [
+            "/projectsImg/hotstar.jpg"
+        ],
+        "stack": [
+            "Python",
+            "Pandas",
+            "Excel",
+            "Power BI"
+        ],
+        "desc": "An analytical study of Hotstar content data, focusing on viewer preferences, content ratings, and platform trends. Built an interactive dashboard to visualize key performance indicators and engagement metrics.",
+        "link": "https://github.com/Yashkshirsagar54",
+        "gitLink": "https://github.com/Yashkshirsagar54",
+        "year": "2024",
+        "isInDevelopment": false
+    },
+    {
+        "title": "Educational Loan Analysis",
+        "imgSrc": "/projectsImg/education_loan.jpg",
+        "imgs": [
+            "/projectsImg/education_loan.jpg"
+        ],
+        "stack": [
+            "Python",
+            "Pandas",
+            "Research"
+        ],
+        "desc": "A specialized educational project focused on applying data analysis techniques to academic datasets. Investigated key metrics to improve learning outcomes and educational efficiency.",
+        "link": "https://github.com/Yashkshirsagar54",
+        "gitLink": "https://github.com/Yashkshirsagar54",
+        "year": "2024",
+        "isInDevelopment": true
+    }
+]

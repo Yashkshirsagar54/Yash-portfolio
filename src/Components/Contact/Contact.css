@@ -1,0 +1,123 @@
+.Contact {
+  text-align: center;
+}
+.animNote {
+  position: absolute;
+  height: 790px;
+  top: 0;
+  right: 0;
+  aspect-ratio: 1;
+  opacity: 0.3;
+}
+.Contact .form {
+  justify-content: center;
+  padding: 2rem 0 3rem 0;
+  text-align: center;
+}
+.Contact .form .tip {
+  color: var(--primary-color);
+  font-family: var(--ff);
+  font-weight: 600;
+  float: right;
+  transform: translate(-10px, 10px);
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+.Contact .form .hide {
+  transform: translate(-50px, 50px);
+  opacity: 0;
+}
+.middle {
+  width: calc(50vw + 10rem);
+  margin: auto;
+}
+.Contact .form input,
+.Contact .form textarea {
+  color: var(--light-text-c);
+  z-index: 1;
+  width: calc(50vw + 10rem);
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+  border: none;
+  background-image: var(--button-gradient);
+  border-radius: 5px;
+  font-family: var(--ff);
+  transition: var(--transition);
+}
+.Contact .form .textarea-container {
+  position: relative;
+}
+.Contact .helloIcon {
+  height: 8rem;
+  z-index: -1;
+  left: 0;
+  top: 20%;
+  rotate: 2deg;
+  position: absolute;
+  transition: var(--transition);
+}
+.Contact .form .textarea-container textarea:hover ~ .helloIcon {
+  top: -20%;
+}
+.Contact .form input:hover,
+.Contact .form textarea:hover {
+  box-shadow: 0 0 50px -10px var(--primary-color);
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file-input {
+  position: relative;
+  cursor: pointer;
+}
+.file-input::before {
+  content: "Upload file";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.6rem;
+  top: 0;
+  position: absolute;
+  left: 0;
+  background-image: var(--button-gradient);
+  border: 1px solid gray;
+  border-radius: 5px 0 0 5px;
+}
+.Contact .form .contactSubmit {
+  border: none;
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  background-image: var(--button-gradient);
+}
+@media screen and (max-width: 400px) {
+  .middle {
+    width: 85vw;
+  }
+  .Contact .form .tip {
+    font-weight: 400;
+    font-size: 0.6rem;
+  }
+
+  .Contact .form input,
+  .Contact .form textarea {
+    padding: 0.5rem 1rem;
+    width: 85vw;
+  }
+  .Contact .helloIcon {
+    height: 5rem;
+  }
+  .Contact .form .textarea-container textarea:hover ~ .helloIcon {
+    top: -10%;
+  }
+  .Contact .form {
+    padding: 1rem 0;
+  }
+  .Contact .form .contactSubmit {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.8rem;
+  }
+}
