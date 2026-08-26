@@ -19,6 +19,8 @@ function Hero(props) {
 
   const [infoData, setInfoData] = useState();
   const [animTitle, setAnimTitle] = useState();
+  const [displayText, setDisplayText] = useState("");
+  const fullText = "Software Developer.";
 
   const getInfo = async () => {
     const info = await fetchInfo();
@@ -28,6 +30,40 @@ function Hero(props) {
 
   useEffect(() => {
     getInfo();
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    let isDeleting = false;
+    let timeoutId;
+
+    const typeLoop = () => {
+      if (!isDeleting) {
+        if (index <= fullText.length) {
+          setDisplayText(fullText.slice(0, index));
+          index++;
+          if (index > fullText.length) {
+            isDeleting = true;
+            timeoutId = setTimeout(typeLoop, 2400);
+            return;
+          }
+          timeoutId = setTimeout(typeLoop, 100);
+        }
+      } else {
+        if (index > 0) {
+          index--;
+          setDisplayText(fullText.slice(0, index));
+          timeoutId = setTimeout(typeLoop, 45);
+        } else {
+          isDeleting = false;
+          timeoutId = setTimeout(typeLoop, 600);
+        }
+      }
+    };
+
+    timeoutId = setTimeout(typeLoop, 400);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   const handleHoverTextEnter = (e) => {
@@ -91,21 +127,15 @@ function Hero(props) {
               />
             )}
           </div>
-          <Typer
-            cursorClassName="typer-cursor"
-            className="main-title"
-            cursorBlinkSpeed={500}
-            sentences={[
-              "Data Analyst",
-              "Frontend Developer",
-            ]}
-            loop={true}
-          />
+          <div className="main-title role-title flex">
+            <span className="role-typing-text">
+              {displayText}
+              <span className="typing-cursor">|</span>
+            </span>
+          </div>
         </div>
         <div className="sub-heading">
-          I am a passionate Data Analyst and Frontend Developer dedicated to building high-quality,
-          performant, and visually stunning web applications. With expertise in
-          modern frameworks and 3D web technologies, I bring creative visions to life.
+          {infoData?.about || "Passionate and results-driven Software Developer with expertise in developing scalable web applications, intelligent AI-driven solutions, and modern full-stack systems. Dedicated to writing clean, performant code and leveraging AI technologies to solve complex problems."}
         </div>
         <Connect />
       </div>

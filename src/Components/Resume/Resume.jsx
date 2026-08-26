@@ -106,7 +106,7 @@ function Resume() {
                 </b>
               </div>
               <div className="sub-heading">
-                Data Analyst and Frontend Developer
+                Software Developer
               </div>
               <div className="links flex">
                 {infoData ? (

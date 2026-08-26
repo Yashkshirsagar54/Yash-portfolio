@@ -24,39 +24,40 @@ function Connect() {
         <div className="buttons flex">
           <a
             target="_blank"
+            rel="noreferrer"
             href={infoData.links.github}
-            className="button"
-            title="follow me on github"
+            className="social-btn github-btn"
+            title="Follow me on GitHub"
           >
             <i className="fa-brands fa-github"></i>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href={infoData.links.linkedin}
-            className="button"
-            title="follow me on linkedin"
+            className="social-btn linkedin-btn"
+            title="Connect with me on LinkedIn"
           >
             <i className="fa-brands fa-linkedin"></i>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href={infoData.links.instagram}
-            className="button"
-            title="follow me on instagram"
+            className="social-btn instagram-btn"
+            title="Follow me on Instagram"
           >
             <i className="fa-brands fa-instagram"></i>
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href={infoData.links.youtube}
-            className="button"
-            title="subscribe me on youtube"
+            className="social-btn youtube-btn"
+            title="Subscribe to my YouTube"
           >
             <i className="fa-brands fa-youtube"></i>
           </a>
-          <Link to={"resume"} title="see resume">
-            <div className="button resume-button">Resume</div>
-          </Link>
         </div>
       ) : (
         <div className="small-loader"></div>

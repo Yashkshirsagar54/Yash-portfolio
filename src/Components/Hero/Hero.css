@@ -17,6 +17,45 @@
   gap: 1vw;
   width: max-content;
 }
+.role-title {
+  margin-top: 0.4rem;
+  min-height: 3.5rem;
+}
+.role-typing-text {
+  color: #ffffff;
+  font-family: var(--ff);
+  font-size: 2.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.light .role-typing-text {
+  color: #2b2b2b;
+}
+
+.dark .role-typing-text {
+  color: #ffffff;
+}
+
+.typing-cursor {
+  display: inline-block;
+  margin-left: 5px;
+  color: var(--primary-color);
+  font-weight: 300;
+  animation: cursorBlink 0.75s infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 .animArrow {
   position: absolute;
   height: 60px;
@@ -47,14 +86,20 @@
   position: relative;
 }
 .Hero .right .myImg {
-  height: 30rem;
+  height: 32rem;
   width: 25rem;
   object-fit: cover;
-  filter: grayscale(10%);
+  object-position: center 62%;
+  border-radius: 16px;
+  filter: contrast(106%) saturate(110%) brightness(103%);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   box-shadow: var(--shadow);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
-.Hero .right .myImg {
-  filter: grayscale(0%);
+
+.Hero .right .myImg:hover {
+  filter: contrast(108%) saturate(115%) brightness(105%);
 }
 .Hero .right .fireIcon {
   height: 8rem;
@@ -84,6 +129,7 @@
   left: 0;
   height: 100%;
   width: 100%;
+  border-radius: 16px;
   opacity: 0.7;
   z-index: -9;
   transition: var(--transition);

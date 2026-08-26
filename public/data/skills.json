@@ -2,31 +2,79 @@
     {
         "name": "Python",
         "link": "https://www.python.org/",
-        "imgLink": "https://profilinator.rishav.dev/skills-assets/python-original.svg"
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        "color": "#FFD438"
     },
     {
         "name": "JavaScript",
         "link": "https://www.javascript.com/",
-        "imgLink": "https://profilinator.rishav.dev/skills-assets/javascript-original.svg"
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        "color": "#F7DF1E"
     },
     {
-        "name": "CSS",
-        "link": "https://www.w3schools.com/css/",
-        "imgLink": "https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg"
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        "color": "#3178C6"
     },
     {
-        "name": "HTML",
+        "name": "React",
+        "link": "https://react.dev/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        "color": "#61DAFB"
+    },
+    {
+        "name": "Node.js",
+        "link": "https://nodejs.org/",
+        "imgLink": "/iconsImg/nodejs.svg",
+        "color": "#539E43"
+    },
+    {
+        "name": "Git",
+        "link": "https://git-scm.com/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+        "color": "#F05032"
+    },
+    {
+        "name": "GitHub",
+        "link": "https://github.com/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+        "color": "#A371F7"
+    },
+    {
+        "name": "PostgreSQL",
+        "link": "https://www.postgresql.org/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+        "color": "#336791"
+    },
+    {
+        "name": "MongoDB",
+        "link": "https://www.mongodb.com/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+        "color": "#47A248"
+    },
+    {
+        "name": "Docker",
+        "link": "https://www.docker.com/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+        "color": "#2496ED"
+    },
+    {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg",
+        "color": "#38BDF8"
+    },
+    {
+        "name": "HTML5",
         "link": "https://en.wikipedia.org/wiki/HTML5",
-        "imgLink": "https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg"
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+        "color": "#E34F26"
     },
     {
-        "name": "Excel",
-        "link": "https://www.microsoft.com/en-us/microsoft-365/excel",
-        "imgLink": "/iconsImg/excel.jpg"
-    },
-    {
-        "name": "Power BI",
-        "link": "https://powerbi.microsoft.com/",
-        "imgLink": "/iconsImg/power-bi.png"
+        "name": "CSS3",
+        "link": "https://www.w3schools.com/css/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+        "color": "#1572B6"
     }
 ]

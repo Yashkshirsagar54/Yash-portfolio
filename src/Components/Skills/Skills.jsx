@@ -10,39 +10,13 @@ import fetchSkills from "../../Utils/GetSkills";
 function Skills() {
   const [skills, setSkills] = useState();
 
-  const [row1Pos, setRow1Pos] = useState(0);
-  const [row2Pos, setRow2Pos] = useState(0);
-
   const getSkills = async () => {
     setSkills(await fetchSkills());
   };
 
   useEffect(() => {
     getSkills();
-    tick();
   }, []);
-
-  const devider = 50;
-
-  const tick = () => {
-    setRow1Pos((prev) => {
-      if (prev / devider == -100) {
-        return Math.abs(prev);
-      }
-      return --prev;
-    });
-
-    setRow2Pos((prev) => {
-      if (prev / devider == -200) {
-        return 0;
-      }
-      return --prev;
-    });
-
-    window.requestAnimationFrame(() => {
-      tick();
-    });
-  };
 
   return (
     <div className="Skills" id="skills">
@@ -55,63 +29,100 @@ function Skills() {
       </div>
       <div className="all-skills flex">
         <div className="section">
-          <ul>
-            <li className="button" title="it's not a button">
-              Python
+          <ul className="skills-grid">
+            <li className="skill-glow-card" style={{ "--glow-delay": "0s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                  alt="Python"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">Python</span>
+              </div>
             </li>
-            <li className="button" title="it's not a button">
-              JavaScript
+            <li className="skill-glow-card" style={{ "--glow-delay": "0.7s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">JavaScript</span>
+              </div>
             </li>
-            <li className="button" title="it's not a button">
-              CSS
+            <li className="skill-glow-card" style={{ "--glow-delay": "1.4s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                  alt="React"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">React</span>
+              </div>
             </li>
           </ul>
         </div>
         <div className="section">
-          <ul>
-            <li className="button" title="it's not a button">
-              HTML
+          <ul className="skills-grid">
+            <li className="skill-glow-card" style={{ "--glow-delay": "2.1s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="/iconsImg/nodejs.svg"
+                  alt="Node.js"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">Node.js</span>
+              </div>
             </li>
-            <li className="button" title="it's not a button">
-              Excel
+            <li className="skill-glow-card" style={{ "--glow-delay": "2.8s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+                  alt="Git"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">Git & GitHub</span>
+              </div>
             </li>
-            <li className="button" title="it's not a button">
-              Power BI
+            <li className="skill-glow-card" style={{ "--glow-delay": "3.5s" }}>
+              <div className="skill-content flex">
+                <img
+                  src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+                  alt="SQL & Databases"
+                  className="skill-card-img"
+                />
+                <span className="skill-name">SQL & Databases</span>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-      <div className="skills-row flex">
+      <div className="skills-single-track">
         {skills ? (
-          <>
-            {" "}
-            <div
-              className="row-1 flex"
-              style={{ transform: `translateX(${row1Pos / devider}%)` }}
-            >
-              {skills.map((skill) => (
+          <div className="track-inner">
+            <div className="track-group">
+              {skills.map((skill, index) => (
                 <Skill
-                  key={skill.name}
+                  key={`${skill.name}-g1-${index}`}
                   link={skill.link}
                   imgLink={skill.imgLink}
                   name={skill.name}
+                  color={skill.color}
                 />
               ))}
             </div>
-            <div
-              className="row-2 flex"
-              style={{ transform: `translateX(${row2Pos / devider}%)` }}
-            >
-              {skills.map((skill) => (
+            <div className="track-group" aria-hidden="true">
+              {skills.map((skill, index) => (
                 <Skill
-                  key={skill.name}
+                  key={`${skill.name}-g2-${index}`}
                   link={skill.link}
                   imgLink={skill.imgLink}
                   name={skill.name}
+                  color={skill.color}
                 />
               ))}
-            </div>{" "}
-          </>
+            </div>
+          </div>
         ) : (
           <div className="small-loader"></div>
         )}

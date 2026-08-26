@@ -1,25 +1,111 @@
 .connect .buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
   flex-wrap: wrap;
 }
-.connect .button {
-  padding: 0.5rem 1rem;
-  margin: 1rem 0.5rem;
-  z-index: 1;
+
+.connect .social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0.4rem;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: var(--light-text-c);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* GitHub Brand Glow */
+.connect .github-btn {
+  color: var(--light-text-c);
+}
+
+.connect .github-btn:hover {
+  color: #f0f6fc;
+  transform: translateY(-5px) scale(1.18);
+  filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 18px rgba(255, 255, 255, 0.5));
+}
+
+/* LinkedIn Brand Glow */
+.connect .linkedin-btn {
+  color: #0A66C2;
+}
+
+.connect .linkedin-btn:hover {
+  color: #388bfd;
+  transform: translateY(-5px) scale(1.18);
+  filter: drop-shadow(0 0 10px #0A66C2) drop-shadow(0 0 22px rgba(10, 102, 194, 0.6));
+}
+
+/* Instagram Brand Glow */
+.connect .instagram-btn {
+  color: #E4405F;
+}
+
+.connect .instagram-btn:hover {
+  color: #fd1d1d;
+  transform: translateY(-5px) scale(1.18);
+  filter: drop-shadow(0 0 10px #E4405F) drop-shadow(0 0 22px #F77737) drop-shadow(0 0 30px #C13584);
+}
+
+/* YouTube Brand Glow */
+.connect .youtube-btn {
+  color: #FF0000;
+}
+
+.connect .youtube-btn:hover {
+  color: #ff3333;
+  transform: translateY(-5px) scale(1.18);
+  filter: drop-shadow(0 0 10px #FF0000) drop-shadow(0 0 22px rgba(255, 0, 0, 0.65));
+}
+
+/* Resume Button in Connect */
+.connect .resume-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--primary-color);
+  font-family: var(--ff);
+  font-size: 1.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  margin: 0;
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.connect .resume-social-btn .resume-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--light-text-c);
+  transition: color 0.35s ease;
+}
+
+.connect .resume-social-btn:hover {
+  color: #38bdf8;
+  transform: translateY(-5px) scale(1.15);
+  filter: drop-shadow(0 0 10px var(--primary-color)) drop-shadow(0 0 22px rgba(1, 145, 255, 0.65));
+}
+
+.connect .resume-social-btn:hover .resume-text {
+  color: var(--primary-color);
 }
 
 @media screen and (max-width: 600px) {
   .connect .buttons {
-    justify-content: center;
-  }
-}
-@media screen and (max-width: 500px) {
-  .resume-button {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 325px) {
-  .connect .resume-button {
-    width: 60vw;
+    justify-content: flex-start;
+    gap: 1.2rem;
   }
 }

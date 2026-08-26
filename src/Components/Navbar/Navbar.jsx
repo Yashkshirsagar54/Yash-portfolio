@@ -119,32 +119,85 @@ export default function Navbar(props) {
                 offset={-100}
                 duration={500}
                 title="go to contact section"
+                className="nav-contact-link"
               >
-                <div className="button contact-button">Contact</div>
+                <span className="nav-contact-btn">Contact</span>
               </Link>
-              <NormalLink to={"resume"} title="see resume">
-                <div className="button contact-button">Resume</div>
+              <NormalLink to={"resume"} title="see resume" className="nav-contact-link">
+                <span className="nav-contact-btn">Resume</span>
               </NormalLink>
             </div>
           </>
         )}
 
-        <div
+        <button
           onClick={toggleMode}
-          className="button flex"
-          style={{
-            justifyContent: "center",
-            width: "40px",
-            height: "40px",
-          }}
-          title={`Change theme to ${mode == "dark" ? "light" : "dark"}`}
+          className="theme-toggle-btn flex"
+          title={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
+          aria-label={`Switch to ${mode === "dark" ? "light" : "dark"} mode`}
         >
-          {mode == "light" ? (
-            <i className="fa-solid fa-moon"></i>
+          {mode === "light" ? (
+            <svg
+              className="theme-icon moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#90CAF9" />
+                  <stop offset="50%" stopColor="#64B5F6" />
+                  <stop offset="100%" stopColor="#1E88E5" />
+                </linearGradient>
+                <radialGradient id="moonGlow" cx="40%" cy="40%" r="60%">
+                  <stop offset="0%" stopColor="#E3F2FD" />
+                  <stop offset="60%" stopColor="#90CAF9" />
+                  <stop offset="100%" stopColor="#42A5F5" />
+                </radialGradient>
+              </defs>
+              <path
+                d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
+                fill="url(#moonGlow)"
+                stroke="url(#moonGrad)"
+                strokeWidth="1.2"
+                strokeLinejoin="round"
+              />
+              <circle cx="8" cy="11" r="1.1" fill="#BBDEFB" opacity="0.65" />
+              <circle cx="12" cy="15" r="1.4" fill="#BBDEFB" opacity="0.65" />
+              <circle cx="14" cy="9" r="0.9" fill="#BBDEFB" opacity="0.65" />
+              <path
+                d="M19 3.5L19.4 4.8L20.7 5.2L19.4 5.6L19 6.9L18.6 5.6L17.3 5.2L18.6 4.8L19 3.5Z"
+                fill="#FFD54F"
+              />
+            </svg>
           ) : (
-            <i className="fa-solid fa-sun"></i>
+            <svg
+              className="theme-icon sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#FFF9C4" />
+                  <stop offset="45%" stopColor="#FFCA28" />
+                  <stop offset="100%" stopColor="#FF8F00" />
+                </radialGradient>
+                <linearGradient id="rayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FFE082" />
+                  <stop offset="100%" stopColor="#FF6F00" />
+                </linearGradient>
+              </defs>
+              <circle cx="12" cy="12" r="5.2" fill="url(#sunGlow)" />
+              <path
+                d="M12 2V4.4M12 19.6V22M4.22 4.22L5.92 5.92M18.08 18.08L19.78 19.78M2 12H4.4M19.6 12H22M4.22 19.78L5.92 18.08M18.08 5.92L19.78 4.22"
+                stroke="url(#rayGrad)"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+              />
+            </svg>
           )}
-        </div>
+        </button>
       </div>
     </div>
   );
