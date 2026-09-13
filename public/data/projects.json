@@ -1,5 +1,24 @@
 [
     {
+        "title": "CodeLens AI",
+        "imgSrc": "/projectsImg/codelens.png",
+        "imgs": [
+            "/projectsImg/codelens.png"
+        ],
+        "stack": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Gemini AI",
+            "Node.js"
+        ],
+        "desc": "An advanced AI-powered developer platform for automated code reviews, security vulnerability audits, and performance optimization. Evaluates Big-O complexity, detects bugs, and generates comprehensive unit tests in real time with the Gemini AI engine.",
+        "link": "https://codelens-ai-gamma-navy.vercel.app/",
+        "gitLink": "https://github.com/Yashkshirsagar54/codelens-ai",
+        "year": "2025",
+        "isInDevelopment": false
+    },
+    {
         "title": "Zomato Data Analysis",
         "imgSrc": "/projectsImg/zomato.jpg",
         "imgs": [
