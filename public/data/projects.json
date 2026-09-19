@@ -9,10 +9,9 @@
         ],
         "stack": [
             "HTML5 Canvas",
-            "JavaScript (ES6+)",
-            "Procedural Generation",
+            "JavaScript",
             "CSS3",
-            "Web Audio API"
+            "Audio API"
         ],
         "desc": "An enchanted procedural flower experience built with HTML5 Canvas and vanilla JavaScript. Features dynamic Bezier stem physics, multi-layered realistic blooming algorithms (sunflowers, roses, and starry florets), gentle wind sway, floating fairy dust particles, animated butterflies, twilight and sunset mood lighting, ambient piano music, and interactive stem avoidance and planting on click.",
         "link": "https://petalune.vercel.app/",
