@@ -1,5 +1,25 @@
 [
     {
+        "title": "3D Galaxy Generator",
+        "imgSrc": "/projectsImg/galaxy.jpg",
+        "imgs": [
+            "/projectsImg/galaxy.jpg"
+        ],
+        "stack": [
+            "Three.js",
+            "WebGL",
+            "JavaScript",
+            "Vite",
+            "Node.js",
+            "Express"
+        ],
+        "desc": "An interactive 3D spiral galaxy simulation built with Three.js and WebGL. Features real-time particle rendering with over 100,000 stars, customizable spiral arm mathematics, dynamic color gradients, interactive camera controls, preset saving and loading, and URL-shareable galaxy parameters.",
+        "link": "https://galaxy-generator-mnovabd78-yash-kshirsagars-projects.vercel.app/",
+        "gitLink": "https://github.com/Yashkshirsagar54/Galaxy-Generator-",
+        "year": "2026",
+        "isInDevelopment": false
+    },
+    {
         "title": "Petalune",
         "imgSrc": "/projectsImg/petalune.jpg",
         "imgs": [

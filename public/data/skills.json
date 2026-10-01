@@ -24,6 +24,12 @@
         "color": "#61DAFB"
     },
     {
+        "name": "Three.js",
+        "link": "https://threejs.org/",
+        "imgLink": "https://raw.githubusercontent.com/devicons/devicon/master/icons/threejs/threejs-original.svg",
+        "color": "#049EF4"
+    },
+    {
         "name": "Node.js",
         "link": "https://nodejs.org/",
         "imgLink": "/iconsImg/nodejs.svg",
